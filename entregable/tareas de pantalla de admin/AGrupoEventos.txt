@@ -1,0 +1,17 @@
+eventos de pantalla AGrupo.php
+
+tabla
+1 listar los grupos en la tabla
+2  eliminar con el boton eliminar de la tabla 
+   2.1 mostrar mensaje de confirmacion preguntando desea eliminar el grupo  
+   2.2 mostrar mensaje de exito o error
+3 modificar el grupo 
+    3.1 al presionar el boton de modificar debe enviar la informacion al input text del formulario de grupo y permitir modificarlo
+    3.2 mostrar mensaje de confirmacion preguntando si desea modificar el actual
+    3.3 mostrar mensaje de exito o error
+
+
+formulario de grupo
+1  agregar un nuevo grupo 
+    1.1 verficar que el grupo no exista
+    1.2 guargar y mandar mensaje de exito o error

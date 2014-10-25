@@ -1,0 +1,33 @@
+Eventos de pantalla JCaracteristicas.php
+
+Formulario de caracteristicas    
+
+por cada idioma en la tabla idioma el tab debe tener un formulario de caracteristicas 
+
+eventos
+1 guardar la caracteristicas asociandole el idioma 
+    1.1 al guardar cada caracteristicas debe estar asociado al mismo grupo 
+    ejemplo para el caso de tener dos idioma en la base de datos  español ingles la caracteristicas 
+        memoria y memory debe ser grupo 1  para una caracteristicas llamada botones y button debe ser el grupo 2 
+    1.2 mostrar informacion de alerta cuando algunos de los idioma no este completo
+    1.3 mostrar mensaje de exito o error
+2 modificar caracteristica 
+    2.1 debe mostrar las caracteristicas asociadas por el grupo 
+    2.2 debe validar que la caracteristica este repetida
+    2.3 mostrar informacion de alerta cuando algunos de los idioma no este completo
+    2.4 mostrar mensaje de exito y error
+
+3 eliminar
+    3.1 eliminar debe validar si existen juegos o consolas con la caracteristicas y solo asi se puede eliminar sino enviar un mensaje que diga que tiene asociado juegos
+    3.1 mostrar mensaje de exito o error
+
+4 lista de caracteristicas ordenado por todos (0)/consola (1) /juegos (2)
+    4.1 mostrar las caracteristicas y sus descripciones.
+
+
+NOTA
+
+al guardar es importante pasar la informacion de idioma (ID IDIOMA) Y NUMERO DE GRUPO Y SI ES (CONSOLA/JUEGOS/TODOS) 
+
+
+ 

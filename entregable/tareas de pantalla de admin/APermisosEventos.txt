@@ -1,0 +1,22 @@
+Eventos de pantalla APermiso.php
+
+tabla
+1 listar los permisos existente en la tabla
+2  desactivar* el permiso con el boton eliminar de la tabla  
+   2.1 mostrar mensaje de confirmacion preguntando desea eliminar el permisos  
+   2.2 mostrar mensaje de exito o error
+3 modificar el permiso 
+    3.1 al presionar el boton de modificar debe enviar la informacion al input text del formulario de permiso y permitir modificarlo
+    3.2 mostrar mensaje de confirmacion preguntando si desea modificar el actual
+    3.3 mostrar mensaje de exito o error
+
+
+formulario de permiso
+1  agregar un nuevo grupo 
+    1.1 verficar que el permiso no exista
+    1.2 guargar y mandar mensaje de exito o error
+    1.2.1 si el mensaje de es exito debe mostrar el numero de permiso**
+
+
+*para desactivar un permiso es necesario un query que dado el id cambie el valor de la columna estado a 1
+** el numero de permiso es el id de la tupla.
