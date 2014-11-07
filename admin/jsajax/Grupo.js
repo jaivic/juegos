@@ -45,7 +45,7 @@ FormGrupo = function() {
         BtGuardar = $("#BtAgregar");
         BtModificar = $("#BtModificar");
         sInputName.val("");
-        objMangoMensaje=new MangoMensaje();
+        objMangoMensaje= MangoMensaje;
         objMangoMensaje.Iniciar("FormMensaje")
         BtGuardar.click(Guardar);
         //  BtModificar.click(modificar);
