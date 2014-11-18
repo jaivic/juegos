@@ -155,7 +155,9 @@
 
     <!-- Your custom JS goes here -->
     <script src="js/app.js"></script>
-    <!-- end scripts -->
+
+    <script src="jsajax/MangoMesaje.js"></script>
+    <script src="jsajax/Permisos.js"></script>
 
 </head>
 
@@ -277,7 +279,7 @@
 
                 <h1 class="grid_12"> Gestionar permiso</h1>
 
-                <form action="" class="grid_12">
+                <form action="javascript:void(0);" class="grid_12">
                     <fieldset>
                         <legend>¿Desea crear un permiso?</legend>
                         <div class="row">
@@ -288,12 +290,11 @@
                                 <input type="text" placeholder="Agregue un nombre del nuevo permiso" id="sNombre" />
                             </div>
                         </div>
-                        <button href="javascript:void(0);" class="button grey block"><span class="icon icon-plus"></span>Agregar nuevo premiso</button>
-                        <button href="javascript:void(0);" class="button  block"><span class="icon icon-plus"></span>Modificar permiso</button>
+                        <button id="BtAgregar" class="button grey block"><span class="icon icon-plus"></span>Agregar nuevo premiso</button>
+                        <button id="BtModificar" class="button  block"><span class="icon icon-plus"></span>Modificar permiso</button>
                     </fieldset><!-- End of fieldset -->
-                    <div class="alert success">
-                        <span class="icon"></span><span class="close">x</span>
-                        <strong>Success!</strong> Now it's working :)
+                   <div id="FormMensaje" class="alert ">
+                       
                     </div>
                 </form><!-- End of form -->
 
