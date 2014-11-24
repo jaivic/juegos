@@ -257,19 +257,7 @@
                 <div class="top">
 
                     <!-- Navigation -->
-                    <nav><ul class="collapsible accordion">
-
-                            <li class="current"><a href="#"><img src="img/icons/packs/fugue/16x16/dashboard.png" alt="" height=16 width=16>Normal Entry</a></li>
-
-                            <li>
-                                <a class="open" href="javascript:void(0);"><img src="img/icons/packs/fugue/16x16/ui-layered-pane.png" alt="" height=16 width=16>Submenu<span class="badge">4</span></a>
-                                <ul>
-                                    <li class="current"><a href="#"><span class="icon icon-list"></span>Current</a></li>
-                                    <li><a href="#"><span class="icon icon-table"></span>Another</a></li>
-                                </ul>
-                            </li>
-
-                        </ul></nav><!-- End of nav -->
+           <?php include_once 'frame/menu.php'; ?> 
 
                 </div><!-- End of .top -->
             </aside><!-- End of sidebar -->
@@ -277,38 +265,7 @@
             <!-- Here goes the content. -->
             <section id="content" class="container_12 clearfix" data-sort=true>
                 <div class="grid_12">
-                    <form action="" class="grid_12">
-                        <fieldset>
-                            <legend>¿Desea crear un consolas? - primer idioma</legend>
-                            <div class="row">
-                                <label for="sNombre-1">
-                                    <strong>Nombre</strong>
-                                    <small> llene esta informacion en Español(primer idioma)</small>
 
-                                </label>
-                                <div>
-                                    <input  id="sNombre-1" type="text" placeholder="Agrege un nombre" />
-                                </div>
-
-                            </div>
-                            <div class="row">
-                                <label for="sImagen-1">
-                                    <strong>Imagen</strong>
-                                    <small> llene esta informacion en Español(primer idioma)</small>
-
-                                </label>
-                                <div>
-                                    <button href="javascript:void(0);" class="button  block"><span class="icon icon-plus"></span>subir Imagen </button>
-                                </div>
-
-                            </div>
-
-                        </fieldset><!-- End of fieldset -->
-                        <div class="alert success">
-                            <span class="icon"></span><span class="close">x</span>
-                            <strong>Success!</strong> Now it's working :)
-                        </div>
-                    </form><!-- End of form --> 
                     <div class="box tabbedBox">
                         <div class="header">
                             <h2>Tabs</h2>
@@ -320,34 +277,69 @@
                         </div>
 
                         <div class="content tabbed">
-                            <div id="id-1" class="grid_12">
+                            <div id="id-1">
                                 <form action="" class="grid_12">
                                     <fieldset>
-
+                                        <legend>¿Desea crear un Genero? - primer idioma</legend>
+                                        <div class="row">
+                                            <label for="sNombre-1">
+                                                <strong>Nombre</strong>
+                                                 <small> llene esta informacion en Español(primer idioma)</small>
+                                            
+                                            </label>
+                                            <div>
+                                                <input  id="sNombre-1" type="text" placeholder="Agrege un nombre" />
+                                            </div>
+                                        </div>
                                         <div class="row">
                                             <label for="sDescripcion-1">
                                                 <strong>Descripcion</strong>
-                                                <small>breve informacion del la consola</small>
+                                                <small>informacion que ayude a explicar el nombre de la caracteristicas</small>
                                             </label>
                                             <div>
                                                 <textarea  id="sDescripcion-1" /></textarea>
                                             </div>
                                         </div>
+                                        <button href="javascript:void(0);" class="button grey block"><span class="icon icon-plus"></span>Salvar </button>
+                                        <button href="javascript:void(0);" class="button  block"><span class="icon icon-plus"></span>Modificar</button>
+                                    </fieldset><!-- End of fieldset -->
+                                    <div class="alert success">
+                                        <span class="icon"></span><span class="close">x</span>
+                                        <strong>Success!</strong> Now it's working :)
+                                    </div>
+                                </form><!-- End of form --> 
+                            </div>
+                            <div id="id-2">
+                                 <form action="" class="grid_12">
+                                    <fieldset>
+                                        <legend>¿Desea crear un Genero? - segundo idioma</legend>
                                         <div class="row">
-                                            <label for="sDescripcion-1">
-                                                <strong>agregar Caracteristicas</strong>
-                                                <small>breve informacion del la consola</small>
+                                            <label for="sNombre-2">
+                                                <strong>Nombre</strong>
+                                                 <small> llene esta informacion en ingles(primer idioma)</small>
+                                            
                                             </label>
                                             <div>
-                                                <button href="javascript:void(0);" class="button grey block"><span class="icon icon-plus"></span>Agregar caracteristicas </button>
-
+                                                <input type="text" placeholder="Agregue un nombre" id="sNombre" />
                                             </div>
                                         </div>
-                                    </fieldset>
-
-                            </div>  
-                            <div id="id-2">
-                                [Third content]
+                                        <div class="row">
+                                            <label for="sDescripcion">
+                                                <strong>Descripcion</strong>
+                                                <small>informacion que ayude a explicar el nombre de la caracteristicas</small>
+                                            </label>
+                                            <div>
+                                                <textarea  id="sDescripcion-2" /></textarea>
+                                            </div>
+                                        </div>
+                                        <button href="javascript:void(0);" class="button grey block"><span class="icon icon-plus"></span>Salvar </button>
+                                        <button href="javascript:void(0);" class="button  block"><span class="icon icon-plus"></span>Modificar</button>
+                                    </fieldset><!-- End of fieldset -->
+                                    <div class="alert success">
+                                        <span class="icon"></span><span class="close">x</span>
+                                        <strong>Success!</strong> Now it's working :)
+                                    </div>
+                                </form><!-- End of form --> 
                             </div>
                             <div id="id-3">
                                 [Third content]
@@ -356,6 +348,72 @@
                     </div>
 
                 </div><!-- End of .grid_4 -->
+
+
+
+
+
+                <div class="grid_12">
+                    <div class="box">
+
+                        <div class="header">
+                            <h2>Listas de los generos  existentes</h2>
+                        </div>
+
+                        <div class="content">
+
+                            <table class="styled">
+                                <colgroup>
+                                    <col span="1" style="width: 500px;">
+                                    <col span="1" style="width: 100px;">
+                                    <col span="1">
+
+
+                                </colgroup>
+
+                                <thead>
+                                    <tr>
+                                        <th>Nombres</th>
+                                        <th>Descripcion</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+
+                                        <td>dato</td>
+                                        <td>1</td>
+                                        <td class="center">
+                                            <a href="#" class="button small  tooltip" data-gravity=s title="Edit"><i class="icon-pencil"></i></a>
+                                            <a href="#" class="button small red tooltip" data-gravity=s title="Remove"><i class="icon-remove"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>dato  1 </td>
+                                        <td>descripcion 1</td>
+                                        <td class="center">
+                                            <a href="#" class="button small   tooltip" data-gravity=s title="Edit"><i class="icon-pencil"></i></a>
+                                            <a href="#" class="button small red tooltip" data-gravity=s title="Remove"><i class="icon-remove"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>dato 2 </td>
+                                        <td>3</td>
+                                        <td class="center">
+                                            <a href="#" class="button small   tooltip" data-gravity=s title="Edit"><i class="icon-pencil"></i></a>
+                                            <a href="#" class="button small red tooltip" data-gravity=s title="Remove"><i class="icon-remove"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div><!-- End of .content -->
+
+                    </div><!-- End of .box -->
+                </div><!-- End of .grid_12 -->
+
             </section><!-- End of #content -->
 
         </div><!-- End of #main -->

@@ -20,7 +20,7 @@
            More info: h5bp.com/b/378 -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title>[TITLE] - Mango: Slick and Responsive Admin Template</title>
+        <title>[TITLE]</title>
         <meta name="description" content="Mango is a slick and responsive Admin Template build with modern techniques like HTML5 and CSS3 to be used for backend solutions of any size.">
         <meta name="author" content="Simon Stamm &amp; Markus Siemens">
 
@@ -159,6 +159,9 @@
         <script src="js/app.js"></script>
         <!-- end scripts -->
 
+        <script src="jsajax/MangoMesaje.js"></script>
+        <script src="jsajax/Grupo.js"></script>
+        <script type="text/javascript" src="jsajax/Tabla.js"></script>
     </head>
 
     <body>
@@ -256,20 +259,7 @@
             <aside>
                 <div class="top">
 
-                    <!-- Navigation -->
-                    <nav><ul class="collapsible accordion">
-
-                            <li class="current"><a href="#"><img src="img/icons/packs/fugue/16x16/dashboard.png" alt="" height=16 width=16>Normal Entry</a></li>
-
-                            <li>
-                                <a class="open" href="javascript:void(0);"><img src="img/icons/packs/fugue/16x16/ui-layered-pane.png" alt="" height=16 width=16>Submenu<span class="badge">4</span></a>
-                                <ul>
-                                    <li class="current"><a href="#"><span class="icon icon-list"></span>Current</a></li>
-                                    <li><a href="#"><span class="icon icon-table"></span>Another</a></li>
-                                </ul>
-                            </li>
-
-                        </ul></nav><!-- End of nav -->
+                    <?php include_once 'frame/menu.php'; ?> 
 
                 </div><!-- End of .top -->
             </aside><!-- End of sidebar -->
@@ -279,22 +269,23 @@
 
                 <h1 class="grid_12"> Gestionar Grupo</h1>
 
-                <form action="" class="grid_12">
+                <form action="javascript:void(0);" class="grid_12">
                     <fieldset>
-                        <legend>¿Desea crear un idioma nuevo?</legend>
+                        <legend>¿Desea crear un grupo nuevo?</legend>
                         <div class="row">
                             <label for="sNombre">
-                                <strong>Nombre</strong>
+                                <strong>Nombre del Grupo</strong>
                             </label>
                             <div>
-                                <input type="text" placeholder="Agregue un idioma" id="sNombre" />
+                                <input id="sNombre" type="text" placeholder="Agregue un nombre de un grupo"  />
                             </div>
                         </div>
-                        <button href="javascript:void(0);" class="button red block"><span class="icon icon-plus"></span>Agregar nuevo grupo</button>
+                        <button id="BtAgregar" class="button red block"><span class="icon icon-plus"></span>Agregar nuevo grupo</button>
+                        <button id="BtModificar" class="button red block"><span class="icon icon-plus"></span>Modificar grupo</button>
+
                     </fieldset><!-- End of fieldset -->
-                    <div class="alert success">
-                        <span class="icon"></span><span class="close">x</span>
-                        <strong>Success!</strong> Now it's working :)
+                    <div id="FormMensaje" class="alert ">
+
                     </div>
                 </form><!-- End of form -->
 
@@ -302,53 +293,28 @@
                     <div class="box">
 
                         <div class="header">
-                            <h2>Listas de los idiomas existentes</h2>
+                            <h2>Listas de los grupos existentes</h2>
                         </div>
 
                         <div class="content">
 
-                            <table class="styled">
-                                <colgroup>
-                                    <col span="1" style="width: 500px;">
-                                    <col span="1">
+                            <table id="tabla" class="styled">
 
 
-                                </colgroup>
-
-                                <thead>
-                                    <tr>
-                                        <th>Nombres</th>
-                                        <th>Acciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-
-                                        <td>grupo</td>
-                                        <td class="center">
-                                            <a href="#" class="button small grey tooltip" data-gravity=s title="Edit"><i class="icon-pencil"></i></a>
-                                            <a href="#" class="button small grey tooltip" data-gravity=s title="Remove"><i class="icon-remove"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>grupo 1 </td>
-                                        <td class="center">
-                                            <a href="#" class="button small grey tooltip" data-gravity=s title="Edit"><i class="icon-pencil"></i></a>
-                                            <a href="#" class="button small grey tooltip" data-gravity=s title="Remove"><i class="icon-remove"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>grupo 2 </td>
-                                        <td class="center">
-                                            <a href="#" class="button small grey tooltip" data-gravity=s title="Edit"><i class="icon-pencil"></i></a>
-                                            <a href="#" class="button small grey tooltip" data-gravity=s title="Remove"><i class="icon-remove"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
                             </table>
+                            <script type="text/javascript">
 
+
+
+
+            $().ready(function() {
+                MangoTabla.Iniciar("tabla", "ajax/buscarTodoGrupos.php");
+                MangoTabla.CrearColumna("Nombre de los grupo", 'span="1" style="width: 500px;', "");
+                MangoTabla.CrearColumna("Accion", 'span="1" style="width: 500px;', "center");
+                MangoTabla.CargaTabla();
+
+            })
+                            </script>
                         </div><!-- End of .content -->
 
                     </div><!-- End of .box -->
