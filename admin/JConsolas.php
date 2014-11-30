@@ -260,19 +260,7 @@ include_once 'frame/init.php';
                 <div class="top">
 
                     <!-- Navigation -->
-                    <nav><ul class="collapsible accordion">
-
-                            <li class="current"><a href="#"><img src="img/icons/packs/fugue/16x16/dashboard.png" alt="" height=16 width=16>Normal Entry</a></li>
-
-                            <li>
-                                <a class="open" href="javascript:void(0);"><img src="img/icons/packs/fugue/16x16/ui-layered-pane.png" alt="" height=16 width=16>Submenu<span class="badge">4</span></a>
-                                <ul>
-                                    <li class="current"><a href="#"><span class="icon icon-list"></span>Current</a></li>
-                                    <li><a href="#"><span class="icon icon-table"></span>Another</a></li>
-                                </ul>
-                            </li>
-
-                        </ul></nav><!-- End of nav -->
+                 <?php include_once 'frame/menu.php'; ?> 
 
                 </div><!-- End of .top -->
             </aside><!-- End of sidebar -->

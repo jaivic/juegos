@@ -2,13 +2,13 @@
 $(document).ready(function() {
 
     FormGrupo.Iniciar();
-  
+
 });
 
 /*
  
  Created on : 5-octubre-2014
-Modificado :  25-octubre-2014 - se agrego obj MangoMensaje
+ Modificado :  25-octubre-2014 - se agrego obj MangoMensaje
  Author     : jv
  */
 
@@ -29,7 +29,8 @@ FormGrupo = function() {
     var sInputName;
     var BtGuardar;
     var BtModificar;
-     var objMangoMensaje;
+    var objMangoMensaje;
+    var objMangoTabla;
     /**
      * Formgrupo::Inicio
      *
@@ -45,7 +46,8 @@ FormGrupo = function() {
         BtGuardar = $("#BtAgregar");
         BtModificar = $("#BtModificar");
         sInputName.val("");
-        objMangoMensaje= MangoMensaje;
+        objMangoMensaje = MangoMensaje;
+        objMangoTabla = MangoTabla;
         objMangoMensaje.Iniciar("FormMensaje")
         BtGuardar.click(Guardar);
         //  BtModificar.click(modificar);
@@ -58,24 +60,41 @@ FormGrupo = function() {
      */
     function Guardar() {
 
-        $.post("ajax/AgregarGrupo.php", {
+        $.post("ajax/GrupoAgregar.php", {
             sName: sInputName.val()
         }, function(o) {
             if (o.Tupla > 0) {
-            
+
                 sInputName.val("");
                 objMangoMensaje.MensajeExito(o.sMensaje);
+                objMangoTabla.CargaTabla();
+
             } else {
-                 sInputName.focus();
+                sInputName.focus();
                 objMangoMensaje.MensajeError(o.sMensaje);
             }
         }, "json");
     }/* fin de funcion Guardar*/
-   
+    function Eliminar(id) {
+        if (confirm("Desea eliminar el grupo")) {
+            $.post("ajax/GrupoEliminar.php", {sID: id}, function(o) {
+                if (o.Tupla > 0) {
+                    objMangoTabla.CargaTabla();
+                }
+            }, "json");
+
+        }
+    }
+    function Editar(id) {
+        alert(id);
+        
+    }
+
     return {
         Iniciar: Iniciar,
-        Guardar: Guardar
-       
+        Guardar: Guardar,
+        Editar: Editar,
+        Eliminar: Eliminar
     }
 }();
 
