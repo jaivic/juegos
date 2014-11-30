@@ -35,11 +35,21 @@ class TablePermisos {
     /**
      * 
       lista todos los Permisos de la base de datos
-     
+
       @return integer numero de tupla o -1 si falla la creacion
      */
     public function ListarPermisos() {
         $query = sprintf("select ID,NOMBRE FROM permisos");
+        $this->bd->DoQuery($query);
+
+        return $this->bd->GetCount();
+    }
+
+    public function ValidarPermiso($iIDPermisosAValidar, $iIDGrupo) {
+
+        $query = sprintf("select ID,ID_GRUPO,ID_PERMISO FROM "
+                . "`r_grupo_permisos` WHERE ID_PERMISO='%s' and ID_GRUPO='%s'", $iIDPermisosAValidar, $iIDGrupo);
+        
         $this->bd->DoQuery($query);
 
         return $this->bd->GetCount();

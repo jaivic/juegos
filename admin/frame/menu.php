@@ -1,27 +1,28 @@
-<!-- Navigation -->
-<nav>
+<nav><!--nav -->
     <ul class="collapsible accordion">
         <li>
-            <a class="" href="javascript:void(0);">
+            <a class="open" href="javascript:void(0);">
                 <img src="img/icons/packs/fugue/16x16/ui-layered-pane.png" alt="" height=16 width=16>General<span class="badge">4</span></a>
             <ul>
 
-                <li class="current"><a href="JCaracteristicas.php"><span class="icon icon-table"></span>Caracteristicas</a></li>
-                <li><a href="JClasificacion.php"><span class="icon icon-table"></span>Clasificaciones</a></li>
-                <li><a href="JConsolas.php"><span class="icon icon-table"></span>Consolas</a></li>
-                <li><a href="JGeneros.php"><span class="icon icon-table"></span>Genero</a></li>
-                <li><a href="Galeria.php"><span class="icon icon-table"></span>Galeria</a></li>
-            </ul>
+                <?php
+                echo $permisos->CrearLiMenu($Pagina, 1, "JCaracteristicas.php", "Caracteristicas");
+                echo $permisos->CrearLiMenu($Pagina, 2, "JClasificacion.php", "Clasificacion");
+                echo $permisos->CrearLiMenu($Pagina, 3, "JConsolas.php", "Consolas");
+                echo $permisos->CrearLiMenu($Pagina, 4, "JGeneros.php", "Generos");
+                echo $permisos->CrearLiMenu($Pagina, 5, "Galeria.php", "Galeria");
+                ?>
+          </ul>
         </li>
-
         <li>
             <a class="open" href="javascript:void(0);">
                 <img src="img/icons/packs/fugue/16x16/ui-layered-pane.png" alt="" height=16 width=16>Sistema<span class="badge">4</span></a>
             <ul>
-                <li ><a href="Agrupo.php"><span class="icon icon-list"></span>Grupo</a></li>
-                <li class=""><a href="Apermisos.php"><span class="icon icon-list"></span>Permisos</a></li>
-                <li><a href="JIdioma.php"><span class="icon icon-table"></span>Idioma</a></li>
+                <?php
+                echo $permisos->CrearLiMenu($Pagina, 6, "Agrupo.php", "Grupo");
+                echo $permisos->CrearLiMenu($Pagina, 7, "Apermisos.php", "Permisos");
+                echo $permisos->CrearLiMenu($Pagina, 8, "JIdioma.php", "Idioma");
+                ?>
             </ul>
         </li>
-
     </ul></nav><!-- End of nav -->

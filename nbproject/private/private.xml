@@ -3,11 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp/www/juegos/admin/jsajax/Grupo.js</file>
-            <file>file:/C:/wamp/www/juegos/admin/jsajax/Tabla.js</file>
-            <file>file:/C:/wamp/www/juegos/admin/ajax/buscarTodoGrupos.php</file>
-            <file>file:/C:/wamp/www/juegos/admin/AGrupo.html</file>
-            <file>file:/C:/wamp/www/juegos/base/TableGrupos.php</file>
+            <file>file:/C:/wamp/www/juegos/base/TablePermisos.php</file>
+            <file>file:/C:/wamp/www/juegos/admin/frame/init.php</file>
+            <file>file:/C:/wamp/www/juegos/admin/frame/menu.php</file>
+            <file>file:/C:/wamp/www/juegos/admin/JCaracteristicas.php</file>
+            <file>file:/C:/wamp/www/juegos/admin/AGrupo.php</file>
         </group>
     </open-files>
 </project-private>

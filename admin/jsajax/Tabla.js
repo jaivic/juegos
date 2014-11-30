@@ -26,8 +26,6 @@ MangoTabla = function() {
     var sColGroup;
     var sTBody;
     var sDirAjax;
-    var btEliminar
-    var btModificar
 
     /**
      * 
