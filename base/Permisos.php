@@ -9,6 +9,7 @@ class permisos {
         require_once '../base/ClassCookie.php';
         require_once '../base/tablePermisos.php';
         $this->co = new oCookie();
+        $this->co->SetSVar("iIDGrupo",1);//para pruebas iniciales
         $this->permisos = new TablePermisos();
     }
 
