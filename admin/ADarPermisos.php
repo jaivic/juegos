@@ -262,7 +262,7 @@ include_once 'frame/init.php';
                 <div class="top">
 
                     <!-- Navigation -->
-<?php include_once 'frame/menu.php'; ?> 
+                    <?php include_once 'frame/menu.php'; ?> 
 
                 </div><!-- End of .top -->
             </aside><!-- End of sidebar -->
@@ -272,85 +272,18 @@ include_once 'frame/init.php';
 
                 <h1 class="grid_12"> Gestionar permiso</h1>
 
-                <form action="javascript:void(0);" class="grid_12">
-                    <fieldset>
-                        <legend>¿Desea crear un permiso?</legend>
-                        <div class="row">
-                            <label for="sNombre">
-                                <strong>Nombre de permiso</strong>
-                            </label>
-                            <div>
-                                <input type="text" placeholder="Agregue un nombre del nuevo permiso" id="sNombre" />
-                            </div>
+
+                <div class="grid_12"><div class="box">
+                        <div class="header">
+                            <h2>Dar permisos</h2>
                         </div>
-                        <button id="BtAgregar" class="button grey block"><span class="icon icon-plus"></span>Agregar nuevo premiso</button>
-                        <button id="BtModificar" class="button  block"><span class="icon icon-plus"></span>Modificar permiso</button>
-                    </fieldset><!-- End of fieldset -->
-                    <div id="FormMensaje" class="alert ">
+                        <select id="selectPermisos" class="" data-placeholder="Choose a Name" multiple></select >
+
+                        <select id="selectPermisos" class="dualselects" data-placeholder="Choose a Name" multiple></select >
 
                     </div>
-                </form><!-- End of form -->
-                
-                <div class="grid_12">
-                    <div class="box">
+                </div>
 
-                        <div class="header">
-                            <h2>Listas de los Permisos existentes</h2>
-                        </div>
-
-                        <div class="content">
-
-                            <table class="styled">
-                                <colgroup>
-                                    <col span="1" style="width: 500px;">
-                                    <col span="1" style="width: 100px;">
-                                    <col span="1">
-
-
-                                </colgroup>
-
-                                <thead>
-                                    <tr>
-                                        <th>Nombres</th>
-                                        <th>Numero de permiso</th>
-                                        <th>Acciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-
-                                        <td>permiso</td>
-                                        <td>1</td>
-                                        <td class="center">
-                                            <a href="#" class="button small  tooltip" data-gravity=s title="Edit"><i class="icon-pencil"></i></a>
-                                            <a href="#" class="button small red tooltip" data-gravity=s title="Remove"><i class="icon-remove"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>permiso 1 </td>
-                                        <td>2</td>
-                                        <td class="center">
-                                            <a href="#" class="button small   tooltip" data-gravity=s title="Edit"><i class="icon-pencil"></i></a>
-                                            <a href="#" class="button small red tooltip" data-gravity=s title="Remove"><i class="icon-remove"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>permiso 2 </td>
-                                        <td>3</td>
-                                        <td class="center">
-                                            <a href="#" class="button small   tooltip" data-gravity=s title="Edit"><i class="icon-pencil"></i></a>
-                                            <a href="#" class="button small red tooltip" data-gravity=s title="Remove"><i class="icon-remove"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                        </div><!-- End of .content -->
-
-                    </div><!-- End of .box -->
-                </div><!-- End of .grid_12 -->
             </section><!-- End of #content -->
 
         </div><!-- End of #main -->
