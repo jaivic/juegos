@@ -19,7 +19,8 @@
             <ul>
                 <?php
                 echo $permisos->CrearLiMenu($Pagina, 6, "Agrupo.php", "Grupo");
-                echo $permisos->CrearLiMenu($Pagina, 7, "Apermisos.php", "Permisos");
+                echo $permisos->CrearLiMenu($Pagina, 7, "Apermisos.php", "Crear Permisos");
+                echo $permisos->CrearLiMenu($Pagina, 9, "ADarPermisos.php", "Dar Permisos");
                 echo $permisos->CrearLiMenu($Pagina, 8, "JIdioma.php", "Idioma");
                 ?>
             </ul>
