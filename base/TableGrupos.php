@@ -39,14 +39,18 @@ class TableGrupos {
       @return integer numero de tupla o -1 si falla la creacion
      */
     public function ListarGrupo() {
+<<<<<<< HEAD
         $query = sprintf("select ID,NOMBRE FROM grupo");
+=======
+        $query = sprintf("select ID,NOMBRE,ESTADO FROM grupo where ESTADO=0");
+>>>>>>> origin/master
         $this->bd->DoQuery($query);
         return $this->bd->GetCount();
     }
 
     public function Eliminar($sID) {
-        $query = sprintf("delete from grupo where ID='%s'",$sID);
-        //$query = sprintf("UPDATE  `juegos`.`grupo` SET  `ESTADO` =  '1' WHERE  `grupo`.`ID` ='%s';", $sID);
+      //  $query = sprintf("delete from grupo where ID='%s'",$sID);
+       $query = sprintf("UPDATE  `juegos`.`grupo` SET  `ESTADO` =  '1' WHERE  `grupo`.`ID` ='%s';", $sID);
         $this->bd->DoQuery($query);
         return $this->bd->GetCount();
     }
