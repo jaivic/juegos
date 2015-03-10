@@ -163,7 +163,7 @@ include_once 'frame/init.php';
 
         <script src="jsajax/MangoMesaje.js"></script>
         <script src="jsajax/Permisos.js"></script>
-          <script type="text/javascript" src="jsajax/Tabla.js"></script>
+          <script type="text/javascript" src="jsajax/TablaPermisos.js"></script>
     </head>
 
     <body>
@@ -305,10 +305,10 @@ include_once 'frame/init.php';
                             </table>
                               <script type="text/javascript">
                                 $().ready(function() {
-                                    MangoTabla.Iniciar("tabla", "ajax/buscarTodoPermisos.php");
-                                    MangoTabla.CrearColumna("Nombre de los grupo", 'span="1" style="width: 500px;', "");
-                                    MangoTabla.CrearColumna("Accion", 'span="1" style="width: 500px;', "center");
-                                    MangoTabla.CargaTabla();
+                                    objMangoTabla.Iniciar("tabla", "ajax/buscarTodoPermisos.php");
+                                    objMangoTabla.CrearColumna("Nombre de los grupo", 'span="1" style="width: 500px;', "");
+                                    objMangoTabla.CrearColumna("Accion", 'span="1" style="width: 500px;', "center");
+                                    objMangoTabla.CargaTabla();
 
                                 })
                             </script>
