@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
 
-    FormPermisos.Iniciar();
+    FormGrupo.Iniciar();
 
 });
 
@@ -24,7 +24,7 @@ Modificado :  25-octubre-2014 - se agrego obj MangoMensaje
  * @version 2
  * @access public
  */
-FormPermisos = function() {
+FormGrupo = function() {
 
     var sInputName;
     var BtGuardar;
@@ -59,24 +59,36 @@ FormPermisos = function() {
      */
     function Guardar() {
                 
-
+    
         $.post("ajax/AgregarPermisos.php", {
             sName: sInputName.val()
         }, function(o) {
             if (o.Tupla > 0) {
-            
                 sInputName.val("");
                 objMangoMensaje.MensajeExito(o.sMensaje);
+                objMangoTabla.CargaTabla();
             } else {
                  sInputName.focus();
                 objMangoMensaje.MensajeError(o.sMensaje);
             }
         }, "json");
     }/* fin de funcion Guardar*/
+    function Eliminar(id) {
+        if (confirm("Desea eliminar el grupo")) {
+            $.post("ajax/PermisosEliminar.php", {sID: id}, function(o) {
+                if (o.Tupla > 0) {
+                    objMangoTabla.CargaTabla();
+                }
+            }, "json");
+
+        }
+    }
+
    
     return {
         Iniciar: Iniciar,
-        Guardar: Guardar
+        Guardar: Guardar,
+        Eliminar: Eliminar
        
     }
 }();

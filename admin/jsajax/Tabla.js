@@ -126,13 +126,15 @@ MangoTabla = function() {
 
     function CargaTabla() {
         this.tableGeneral.html("");
-         this.asTuplas = [];
+        this.asTuplas = [];
         this.iCTuplas=0;
-      
+        
         $.post(this.sDirAjax, function(o) {
+         
             if (o.Tupla > 0) {
                 for (var i = 0; i < o.Tupla; i++) {
-                    MangoTabla.LlenarFila([o.Resultado[i].Nombre, MangoTabla.CrearBoton("FormGrupo.Eliminar(" + o.Resultado[i].ID + ")", "icon-remove") + MangoTabla.CrearBoton("FormGrupo.Edit(" + o.Resultado[i].ID + ")", "icon-pencil")]);
+
+                    MangoTabla.LlenarFila([o.Resultado[i].Nombre, MangoTabla.CrearBoton("FormGrupo.Eliminar(" + o.Resultado[i].ID + ")", "icon-remove") + MangoTabla.CrearBoton("FormGrupo.Editar(" + o.Resultado[i].ID + ")", "icon-pencil")]);
                 }
                 MangoTabla.CrearTabla();
             }

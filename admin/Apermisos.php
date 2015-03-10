@@ -163,7 +163,7 @@ include_once 'frame/init.php';
 
         <script src="jsajax/MangoMesaje.js"></script>
         <script src="jsajax/Permisos.js"></script>
-
+          <script type="text/javascript" src="jsajax/Tabla.js"></script>
     </head>
 
     <body>
@@ -300,52 +300,20 @@ include_once 'frame/init.php';
 
                         <div class="content">
 
-                            <table class="styled">
-                                <colgroup>
-                                    <col span="1" style="width: 500px;">
-                                    <col span="1" style="width: 100px;">
-                                    <col span="1">
-
-
-                                </colgroup>
-
-                                <thead>
-                                    <tr>
-                                        <th>Nombres</th>
-                                        <th>Numero de permiso</th>
-                                        <th>Acciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-
-                                        <td>permiso</td>
-                                        <td>1</td>
-                                        <td class="center">
-                                            <a href="#" class="button small  tooltip" data-gravity=s title="Edit"><i class="icon-pencil"></i></a>
-                                            <a href="#" class="button small red tooltip" data-gravity=s title="Remove"><i class="icon-remove"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>permiso 1 </td>
-                                        <td>2</td>
-                                        <td class="center">
-                                            <a href="#" class="button small   tooltip" data-gravity=s title="Edit"><i class="icon-pencil"></i></a>
-                                            <a href="#" class="button small red tooltip" data-gravity=s title="Remove"><i class="icon-remove"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>permiso 2 </td>
-                                        <td>3</td>
-                                        <td class="center">
-                                            <a href="#" class="button small   tooltip" data-gravity=s title="Edit"><i class="icon-pencil"></i></a>
-                                            <a href="#" class="button small red tooltip" data-gravity=s title="Remove"><i class="icon-remove"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
+                            <table id="tabla" class="styled">
+                              
                             </table>
+                              <script type="text/javascript">
+                                $().ready(function() {
+                                    MangoTabla.Iniciar("tabla", "ajax/buscarTodoPermisos.php");
+                                    MangoTabla.CrearColumna("Nombre de los grupo", 'span="1" style="width: 500px;', "");
+                                    MangoTabla.CrearColumna("Accion", 'span="1" style="width: 500px;', "center");
+                                    MangoTabla.CargaTabla();
+
+                                })
+                            </script>
+
+
 
                         </div><!-- End of .content -->
 

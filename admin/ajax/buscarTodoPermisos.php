@@ -10,13 +10,13 @@
 // 3 validad si cualquier cosas necesaria
 // 4 (si todo esta correcto)ejecuta el query
 // 5 responde resultado
-include_once '../../base/TableGrupos.php'; //paso 1
-$bd = new TableGrupos();
+include_once '../../base/TablePermisos.php'; //paso 1
+$bd = new TablePermisos();
 $json = new stdClass();
 $bError = false;
 $iResultado = -1;
 $ARRAY = array();
-$iResultado = $bd->ListarGrupo();
+$iResultado = $bd->ListarPermisos();
 $array = array();
 
 if ($iResultado > 0) {

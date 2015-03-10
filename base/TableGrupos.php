@@ -39,7 +39,7 @@ class TableGrupos {
       @return integer numero de tupla o -1 si falla la creacion
      */
     public function ListarGrupo() {
-        $query = sprintf("select ID,NOMBRE,ESTADO FROM grupo");
+        $query = sprintf("select ID,NOMBRE FROM grupo");
         $this->bd->DoQuery($query);
         return $this->bd->GetCount();
     }

@@ -63,6 +63,7 @@ FormGrupo = function() {
         $.post("ajax/GrupoAgregar.php", {
             sName: sInputName.val()
         }, function(o) {
+            alert(sName);
             if (o.Tupla > 0) {
 
                 sInputName.val("");

@@ -55,4 +55,11 @@ class TablePermisos {
         return $this->bd->GetCount();
     }
 
+    public function Eliminar($sID) {
+        $query = sprintf("delete from grupo where ID='%s'",$sID);
+        //$query = sprintf("UPDATE  `juegos`.`grupo` SET  `ESTADO` =  '1' WHERE  `grupo`.`ID` ='%s';", $sID);
+        $this->bd->DoQuery($query);
+        return $this->bd->GetCount();
+    }
+
 }
