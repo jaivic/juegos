@@ -55,6 +55,21 @@ class TablePermisos {
         return $this->bd->GetCount();
     }
 
+    public function ListarPermisos_grupos(){
+
+
+ $query = sprintf("SELECT g.nombre, p.nombre"
+                ."FROM grupo AS g, r_grupo_permisos AS r, permisos AS p"
+                ."WHERE r.id_grupo=g.id AND p.id=r.id_permiso");
+  $this->bd->DoQuery($query);
+
+        return $this->bd->GetCount();
+
+    }
+
+
+
+
     public function Eliminar($sID) {
         $query = sprintf("delete from grupo where ID='%s'",$sID);
         //$query = sprintf("UPDATE  `juegos`.`grupo` SET  `ESTADO` =  '1' WHERE  `grupo`.`ID` ='%s';", $sID);

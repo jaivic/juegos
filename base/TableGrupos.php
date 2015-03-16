@@ -39,11 +39,8 @@ class TableGrupos {
       @return integer numero de tupla o -1 si falla la creacion
      */
     public function ListarGrupo() {
-<<<<<<< HEAD
-        $query = sprintf("select ID,NOMBRE FROM grupo");
-=======
-        $query = sprintf("select ID,NOMBRE,ESTADO FROM grupo where ESTADO=0");
->>>>>>> origin/master
+
+        $query = "select* FROM grupo";
         $this->bd->DoQuery($query);
         return $this->bd->GetCount();
     }
